@@ -24,10 +24,10 @@ public class StudentController {
     public String doLogin(String username, String password){
         boolean loginStatus = studentService.doLogin(username, password);
         if(loginStatus){
-            log.info("Congratulations , you are in");
+            //log.info("Congratulations , you are in");
             return "Congratulations , you are in";
         }else {
-            log.info("Login Failed");
+            // log.info("Login Failed");
             return "Login Failed";
         }
     }
