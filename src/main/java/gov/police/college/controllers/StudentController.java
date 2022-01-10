@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Slf4j
 public class StudentController {
 
+    String student_name;
+    String student_dob;
+
     @Autowired
     StudentService studentService; // IoC = Inversion of Control
     // login
@@ -36,6 +39,8 @@ public class StudentController {
     @PostMapping("/register")
     public String registration(String name, String dob){
         // todo: completed
+   this.student_name=name;
+   this.student_dob= (dob);
         return "";
     }
 }
